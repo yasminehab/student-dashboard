@@ -1,31 +1,54 @@
-.# Student Dashboard
+### Student-dashboard
+This is a full-stack application designed to present student quizzes and announcements data for the current semester. The application is built with React, Redux (with TypeScript) for the frontend, and Express.js for the backend, using MongoDB as the database.
 
-A full-stack application for managing student quizzes and announcements built with React, Redux, TypeScript, Express.js, and MongoDB.
+### Project Overview
 
-Features
-User authentication (login/logout)
-Dashboard with announcements and upcoming assignments
-Responsive design
-Internationalization support
-Material UI components
-Redux state management
-Express.js backend with MongoDB
-TypeScript support
-Unit testing setup
-Tech Stack
-Frontend
-React
-Redux Toolkit
-TypeScript
-Material UI
-React Router
-i18next
-Axios
-Backend
-Express.js
-MongoDB with Mongoose
-TypeScript
-Jest for testing
+This project implements a student dashboard where logged-in users can view quizzes and announcements for the current semester. It involves both frontend and backend components, built using best practices and clean, structured code.
+
+### Key Features
+
+A home page with login/logout functionality.
+A dashboard page that only renders for logged-in users using an HOC requireAuth.
+CRUD operations for quizzes and announcements on the backend.
+Responsive design using Material UI.
+The application is prepared for future translations using i18n.
+Unit and integration tests to verify the functionality.
+
+### Frontend Requirements
+
+User Authentication
+The application should have a log-in/logout button on the home page to toggle the user’s logged-in state.
+If the user is logged in, the dashboard is shown, otherwise, the user is redirected to the home page.
+A Higher Order Component (HOC) called requireAuth ensures that only logged-in users can access the dashboard.
+UI/UX Design
+The dashboard is fully responsive and can fit any screen size.
+Use Material UI components for consistent design.
+Sidebar links should change their background and foreground colors to white on hover.
+Reusability & Internationalization
+Build reusable components for various parts of the UI.
+The app should be prepared for i18n to support future translations.
+Testing
+Apply unit tests and integration tests using your favorite testing library (e.g., Jest, React Testing Library).
+
+### Backend Requirements
+
+Web Services
+GET /announcements: Retrieve all announcements.
+GET /quizzes: Retrieve all quizzes.
+POST /announcements: Create a new announcement.
+POST /quizzes: Create a new quiz.
+PUT /announcements/:id: Update an existing announcement.
+PUT /quizzes/:id: Update an existing quiz.
+DELETE /announcements/:id: Delete an announcement.
+DELETE /quizzes/:id: Delete a quiz.
+CRUD Operations
+Ensure that all CRUD operations are implemented for both announcements and quizzes.
+
+### Installation
+
+Node.js (v14 or higher)
+MongoDB (either locally or use a cloud database like MongoDB Atlas)
+
 ## Limitations and Areas for Enhancement
 
 ### Current Limitations
